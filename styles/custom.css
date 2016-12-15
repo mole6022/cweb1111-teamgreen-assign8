@@ -1,0 +1,12 @@
+.list-reverse {
+	list-style-type:none;
+	counter-reset:item 11;
+}
+
+.list-reverse li {
+	counter-increment:item -1;
+}
+
+.list-reverse li h5:before {
+    content:counter(item) ". ";
+}
