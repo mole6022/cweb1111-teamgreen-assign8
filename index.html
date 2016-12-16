@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>W3.CSS Template</title>
+		<title>Eclipse Blackjack</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/core.css">
+		<link rel="stylesheet" href="styles/custom.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 		<style>
 		body, html {
@@ -31,13 +32,13 @@
 					<a href="#" class="w3-btn-block w3-hover-white">HOME</a>
 				</div>
 				<div class="w3-col s3">
-				<a href="#about" class="w3-btn-block w3-hover-white">ABOUT</a>
+				<a href="#about" class="w3-btn-block w3-hover-white">ABOUT ECLIPSE</a>
 				</div>
 				<div class="w3-col s3">
-					<a href="#menu" class="w3-btn-block w3-hover-white">MENU</a>
+				<a href="#geteclipse" class="w3-btn-block w3-hover-white">GET ECLIPSE</a>
 				</div>
 				<div class="w3-col s3">
-					<a href="#where" class="w3-btn-block w3-hover-white">WHERE</a>
+					<a href="#blackjack" class="w3-btn-block w3-hover-white">BLACKJACK</a>
 				</div>
 			</div>
 		</div>
@@ -58,109 +59,154 @@
 		<!-- Add a background color and large text to the whole page -->
 		<div class="w3-sand w3-grayscale w3-large">
 
-		<!-- About Container -->
-		<div class="w3-container" id="about">
-			<div class="w3-content" style="max-width:700px">
-				<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">ABOUT THE CAFE</span></h5>
-				<p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-				<div class="w3-panel w3-leftbar w3-light-grey">
-					<p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-					<p>Chef, Coffeeist and Owner: Liam Brown</p>
+			<!-- About Container -->
+			<div class="w3-container" id="about">
+				<div class="w3-content">
+					<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">ABOUT ECLIPSE</span></h5>
+					<p>Eclipse is an integrated development environment (IDE) used in computer programming, and is the most widely used Java IDE. It contains a base workspace and an extensible plug-in system for customizing the environment. Eclipse is written mostly in Java and its primary use is for developing Java applications, but it may also be used to develop applications in other programming languages through the use of plugins, including: Ada, ABAP, C, C++, COBOL, D, Fortran, Haskell, JavaScript, Julia, Lasso, Lua, NATURAL, Perl, PHP, Prolog, Python, R, Ruby (including Ruby on Rails framework), Rust, Scala, Clojure, Groovy, Scheme, and Erlang. It can also be used to develop documents with LaTeX (through the use of the TeXlipse plugin) and packages for the software Mathematica. Development environments include the Eclipse Java development tools (JDT) for Java and Scala, Eclipse CDT for C/C++ and Eclipse PDT for PHP, among others.</p>
+					<div class="w3-row w3-center w3-card-2 w3-padding">
+						<a href="javascript:void(0)" onclick="openMenu(event, 'Features');" id="myLink">
+							<div class="w3-col s4 tablink">Features</div>
+						</a>
+						<a href="javascript:void(0)" onclick="openMenu(event, 'Plugins');">
+							<div class="w3-col s4 tablink">Plugins</div>
+						</a>
+						<a href="javascript:void(0)" onclick="openMenu(event, 'Shortcuts');">
+							<div class="w3-col s4 tablink">Shortcuts</div>
+						</a>
+					</div>
+					<div id="Features" class="w3-container menu w3-padding-48 w3-card-2">
+						<h2 style="text-align:center;">Features</h2>
+						<ul class="list-reverse w3-ul w3-hoverable">
+							<li>
+								<h5>Mac Layout</h5>
+								<p>While 10 years is a long time, some Eclipse feature requests last longer than that. In fact, since the very beginning of Eclipse, the Eclipse community has been requesting a proper Mac Application for Eclipse.</p>
+								<p>This year the Eclipse team finally delivered, shipping the MacOS version as a proper Mac application. This means that Eclipse can be unzipped and dragged directly in your Application folder. With this change, installing Eclipse becomes much easier on Mac, and features like &ldquo;open with&rdquo; now work as expected.</p>
+							</li>
+							<li>
+								<h5>Platform Improvements</h5>
+								<p>The Eclipse platform is the core of all Eclipse based applications and plugins. Improvements to the platform benefit all users. There are a number of improvements to the core platform this year, including an improved Dark Theme, crisper icons and proper transparency support in SWT.</p>
+							</li>
+							<li>
+								<h5>UI Monitoring</h5>
+								<p>From Mac&rsquo;s spinning beach ball of death to Window&rsquo;s unresponsive UI, user interface lags take developers out of the flow. Users have tried to fix the problem by clicking the mouse a little harder or hammering on the esc key; but as we all know, that doesn&rsquo;t work. The only real fix is to understand what long-running task is blocking the UI thread.</p>
+							</li>
+							<li>
+								<h5>C/C++ Launching</h5>
+								<p>The developers behind the C/C++ tooling in Eclipse (CDT) have brought a number of new enhancements this year. To make it easier to launch your applications and choose your target device, a new launch bar was added. As well as the launch bar, the CDT also added support for direct Docker deployment. This means that you can deploy your C/C++ applications from Eclipse directly to a docker container.</p>
+							</li>
+							<li>
+								<h5>e4 Tools</h5>
+								<p>In 2012 Eclipse launched a new application model called e4. The application can be designed through a series of UI models, styled using CSS and dependencies are managed via DI.</p>
+								<p>This year, the Eclipse team has released the long awaited tooling for e4 as part of the simultaneous release. The Plug-in Development Environment (PDE) has a series of wizards and tools to help you create an Eclipse 4 application and editors to help you configure your models.</p>
+							</li>
+							<li>
+								<h5>JDT Improvements</h5>
+								<p>Eclipse Luna (2014) shipped with Java 8 support and this year the team expanded on that support. There are quick fixes for creating method references from lambda expressions; quick-fixes for inferring lambda parameter; several new templates have been added for things like try / finally and lock acquisition; and much improved static flow analysis.</p>
+							</li>
+							<li>
+								<h5>Docker Tools</h5>
+								<p>Throughout any given day, users may work on several different projects. They may work with Tomcat servers, CouchDB, C/C++ builds, node.js and many other technologies. Docker has been a life-saver when it comes to managing all these stacks, and users are excited to see Docker tools integrated directly within Eclipse.</p>
+								<p>There is a new Docker perspective that you can use to connect to a Docker daemon. There are views to manage your images and containers and even a log inspector.</p>
+							</li>
+							<li>
+								<h5>Git Flow</h5>
+								<p>Eclipse has shipped with Git support since 2011. While the tool has improved significantly over the years, many developers would still drop to the command line for custom tasks. One such example is the use of Git Flow. Git Flow is a branching model that places meaning on different branches. Each feature is developed in its own branch, and merged into a standard &lsquo;develop&rsquo; branch. To perform a release, the &lsquo;develop&rsquo; branch is merged into master. There are tools to help simplify this process.</p>
+								<p>With Eclipse Mars, there is now support for Git Flow directly from Eclipse.</p>
+							</li>
+							<li>
+								<h5>Automatic Error Reporting</h5>
+								<p>Instead of simply logging errors to the console, Eclipse can now report errors directly to the Eclipse committers; putting the information in the hands of those who can use it.</p>
+								<p>When errors are detected, you will be prompted if you would like to send the details to eclipse.org. Committers will be able to create bug reports from the data, see similar incidents and help triage issues as they come in. Finally, if an issue has already been fixed, Eclipse will notify you and inform you of the version that contains the fix.</p>
+							</li>
+							<li>
+								<h5>The Eclipse Installer (by Oomph)</h5>
+								<p>This year Eclipse offers a completely new way to download and work with the IDE. Instead of downloading each package individually, the Eclipse installer by Oomph allows you to choose the installation you wish, and it will provision it for you.</p>
+								<p>You can choose _bundle pool_, to share Eclipse plugins between installations. This means that if you install another package, all the common bits will be shared. Finally, once Eclipse is started, you can walk through the Eclipse Welcome Questionnaire to set common Eclipse preferences to your liking.</p>
+							</li>
+						</ul>
+					</div>
+					<div id="Plugins" class="w3-container menu w3-padding-48 w3-card-2">
+						<h2 style="text-align:center;">Plugins</h2>
+						<ul class="w3-ul w3-hoverable">
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/subclipse" target="_blank" class="w3-hover-text-green">Subclipse</a></h4>
+								<p>An Eclipse Team Provider plug-in providing support for Subversion within the Eclipse IDE. Developed and maintained by Subversion core committers, Subclipse is always in synch with the latest Subversion features and releases.</p>
+								<p>Subclipse includes the CollabNet Merge Client originally developed as part of the <a href="http://marketplace.eclipse.org/content/collabnet-desktop-eclipse-edition" target="_blank" class="w3-hover-text-green">CollabNet Desktop - Eclipse Edition</a>. The CollabNet Merge Client provides powerful graphical merge capabilities that leverages the merge tracking functionality that was added as part of the Subversion 1.5 release.</p>
+								<p>Subclipse includes an optional Mylyn connector that enables Mylyn to create automatic changesets based on the tasks you are working on. It also enables links to tasks when viewing history of Subversion commits.</p>
+								<p>Finally, Subclipse includes a powerful revision graph feature that is built with Eclipse GEF/Draw2D. This allows you to visualize commits and merges across Subversion branches.</p>
+							</li>
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/umlet-uml-tool-fast-uml-diagrams" target="_blank" class="w3-hover-text-green">UMLet</a></h4>
+								<p>The free UML tool UMLet lets you draw UML diagrams with a light-weight, pop-up-free user interface. It lets you draw diagram sketches fast; export diagrams to pdf, eps, jpg, gif, svg, bmp, png, and system clipboard; share diagrams using Eclipse 3+; and create your own custom graphical elements.</p>
+							</li>
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/findbugs-eclipse-plugin" target="_blank" class="w3-hover-text-green">FindBugs</a></h4>
+								<p>FindBugs is a defect detection tool for Java that uses static analysis to look for more than 200 bug patterns, such as null pointer dereferences, infinite recursive loops, bad uses of the Java libraries and deadlocks. FindBugs can identify hundreds of serious defects in large applications (typically about 1 defect per 1000-2000 lines of non-commenting source statements). FindBugs is open source (LGPL), has been downloaded more than 500,000 times and is used by many major companies and financial institutions.</p>
+								<p>FindBugs Eclipse Plugin integrates FindBugs seamlessly with the most popular Java IDE and allows to run FindBugs analysis incrementally on changed files or on demand per project.</p>
+							</li>
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/eclipse-color-theme" target="_blank" class="w3-hover-text-green">Eclipse Color Theme</a></h4>
+								<p>Eclipse Color Theme makes it possible to switch color themes conveniently and without side effects.</p>
+								<p>While Eclipse allows you to change the syntax coloring in great detail, there is no support for managing multiple color themes. It is possible to achieve that by importing and exporting preferences files, but this is inconvenient and likely to mess up your preferences. Furthermore, color themes have to be created for every single editor, a theme for the Java editor does not change the XML, JavaScript or any other editors. This plugin solves these issues by mapping a generic color theme format to specific preferences entries for each supported editor.</p>
+							</li>
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/egit-git-integration-eclipse" target="_blank" class="w3-hover-text-green">EGit</a></h4>
+								<p>EGit is the Git integration for Eclipse. Git is a distributed versioning system, which means every developer has a full copy of all history of every revision of the code, making queries against the history very fast and versatile. The EGit project is implementing Eclipse tooling on top of the JGit Java implementation of Git.</p>
+							</li>
+							<li>
+								<h4><a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse" target="_blank" class="w3-hover-text-green">PyDev</a></h4>
+								<p>PyDev is a plugin that enables Eclipse to be used as a Python IDE (supporting also Jython and IronPython).</p>
+								<p>It uses advanced type inference techniques to provide features such code completion and code analysis, while still providing many others such as a debugger, interactive console, refactoring, etc.</p>
+							</li>
+						</ul>
+					</div>
+					<div id="Shortcuts" class="w3-container menu w3-padding-48 w3-card-2">
+						<h2 style="text-align:center;">Shortcuts</h2>
+						<img src="images/1_files.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 1">
+						<img src="images/2_editor.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 2">
+						<img src="images/3_navigate.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 3">
+						<img src="images/4_select.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 4">
+						<img src="images/5_edit.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 5">
+						<img src="images/6_search.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 6">
+						<img src="images/7_indent.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 7">
+						<img src="images/8_source.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 8">
+						<img src="images/9_code.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 9">
+						<img src="images/10_refactoring.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 10">
+						<img src="images/11_run.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 11">
+						<img src="images/12_rest.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 12">
+						<img src="images/13_team.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Shortcuts page 13">
+					</div>
+					<img src="images/logo-eclipse.png" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Eclipse Logo">
 				</div>
-				<img src="images/logo-eclipse.png" style="width:100%;max-width:1000px" class="w3-margin-top" alt="">
-				<p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-				<p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
 			</div>
-		</div>
-
-		<!-- Menu Container -->
-		<div class="w3-container" id="menu">
-		  <div class="w3-content" style="max-width:700px">
-		 
-			<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">THE MENU</span></h5>
-		  
-			<div class="w3-row w3-center w3-card-2 w3-padding">
-			  <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-				<div class="w3-col s6 tablink">Eat</div>
-			  </a>
-			  <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-				<div class="w3-col s6 tablink">Drink</div>
-			  </a>
+			<!-- Get Eclipse container -->
+			<div class="w3-container" id="geteclipse">
+				<div class="w3-content">
+					<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">GET ECLIPSE</span></h5>
+					<p><strong>Available At:</strong> <a href="http://www.eclipse.org/" target="_blank" class="w3-hover-text-green">http://www.eclipse.org/</a></p>
+					<img src="images/blackjackheader.jpg" style="width:100%;max-width:1000px" class="w3-margin-top" alt="Blackjack" />
+				</div>
 			</div>
-
-			<div id="Eat" class="w3-container menu w3-padding-48 w3-card-2">
-			  <h5>Bread Basket</h5>
-			  <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-			
-			  <h5>Honey Almond Granola with Fruits</h5>
-			  <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-			
-			  <h5>Belgian Waffle</h5>
-			  <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-			
-			  <h5>Scrambled eggs</h5>
-			  <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-			
-			  <h5>Blueberry Pancakes</h5>
-			  <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+			<!-- Blackjack container -->
+			<div class="w3-container" id="blackjack">
+				<div class="w3-content">
+					<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">PLAY BLACKJACK</span></h5>
+					<p>Blackjack description placeholder</p>
+					<p><strong>Play The Game:</strong> <a class="w3-hover-text-green">Not Available Yet</a></p>
+					<p><strong>Pseudocode:</strong> <a href="files/blackjackPsuedo.psu" class="w3-hover-text-green">Available Here</a></p>
+				</div>
 			</div>
-
-			<div id="Drinks" class="w3-container menu w3-padding-48 w3-card-2">
-			  <h5>Coffee</h5>
-			  <p class="w3-text-grey">Regular coffee 2.50</p><br>
-			
-			  <h5>Chocolato</h5>
-			  <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-			
-			  <h5>Corretto</h5>
-			  <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-			
-			  <h5>Iced tea</h5>
-			  <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-			
-			  <h5>Soda</h5>
-			  <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-			</div>  
-			<img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;" alt="">
-		  </div>
-		</div>
-
 		<!-- End page content -->
 		</div>
-
 		<!-- Footer -->
 		<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-		  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+			<h5>Image credits:</h5>
+			<p><a href="http://www.eclipse.org/hudson" target="_blank" class="w3-hover-text-green">Eclipse Hudson Project</a></p>
+			<p><a href="https://www.shortcutworld.com/en/win/Eclipse.html" target="_blank" class="w3-hover-text-green">Shortcut World</a></p>
+			<p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 		</footer>
-
-		<!-- Add Google Maps -->
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
-
 		<script>
-		// Google Map Location
-		var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-
-		function initialize() {
-		var mapProp = {
-		  center: myCenter,
-		  zoom: 12,
-		  scrollwheel: false,
-		  draggable: false,
-		  mapTypeId: google.maps.MapTypeId.ROADMAP
-		  };
-
-		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-		var marker = new google.maps.Marker({
-		  position: myCenter,
-		});
-
-		marker.setMap(map);
-		}
-
-		google.maps.event.addDomListener(window, 'load', initialize);
-
 		// Tabbed Menu
 		function openMenu(evt, menuName) {
 		  var i, x, tablinks;
